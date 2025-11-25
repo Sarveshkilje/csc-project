@@ -1,101 +1,41 @@
-import { FlipWords } from "./FlipWords";
 import { motion } from "motion/react";
 
 const HeroText = () => {
-  const words = ["Web Developer", "Ui/Ux Desginer"];
-  const variants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 },
-  };
   return (
-    <div className="z-10 mt-20 text-center md:mt-40 md:text-left rounded-3xl bg-clip-text">
-      {/* Desktop View */}
-      <div className="flex-col hidden lg:flex c-space">
-        <motion.h1
-          className="text-5xl font-medium"
-          variants={variants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 1 }}
-        >
-          Hi I'm Sarvesh
-        </motion.h1>
-        <div className="flex flex-col items-start">
-          <motion.p
-            className="text-3xl font-medium text-neutral-300"
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.2 }}
-          >
-            A Passionate
-          </motion.p>
-                              <FlipWords
-              words={words}
-              className="font-black text-white text-7xl"
-            />
-          <motion.div
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.5 }}
-          >
-          </motion.div>
-          <motion.p
-            className="text-2xl font-medium text-neutral-300"
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.8 }}
-          >
-            turning ideas into interactive realities.
-          </motion.p>
+    <section className="pt-32 md:pt-40 px-6 md:px-16">
+      <div className="max-w-3xl">
+
+        {/* MAIN HEADING */}
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white">
+          Building Future{" "}
+          <span className="bg-gradient-to-r from-blue-300 to-cyan-400 text-transparent bg-clip-text drop-shadow-[0_0_10px_#00eaff]">
+            Cybersecurity
+          </span>{" "}
+          <span className="bg-gradient-to-r from-cyan-400 to-green-400 text-transparent bg-clip-text drop-shadow-[0_0_5px_#00eaff]">
+            Leaders
+          </span>{" "}
+          Through Innovation.
+        </h1>
+
+        {/* PARAGRAPH */}
+        <p className="mt-6 text-neutral-300 text-base md:text-lg leading-relaxed">
+          Master cybersecurity skills through hands-on workshops, collaborate on
+          security projects, and explore the fascinating world of ethical hacking!
+          Our club welcomes aspiring security professionals from all departments.
+        </p>
+
+        {/* BUTTONS */}
+        <div className="flex gap-4 mt-8">
+          <button className="px-5 py-2 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg font-medium text-black shadow-lg hover:scale-105 transition">
+            Join the Club
+          </button>
+
+          <button className="px-5 py-2 border border-cyan-400 text-cyan-300 rounded-lg font-medium hover:bg-cyan-400/10 transition">
+            Learn More
+          </button>
         </div>
       </div>
-      {/* Mobile View */}
-      <div className="flex- flex-col mt-20 lg:hidden">
-        <motion.p
-          className="text-4xl font-medium"
-          variants={variants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 1 }}
-        >
-          Hi,I'm Sarvesh
-        </motion.p>
-        <div>
-          <motion.p
-            className="text-1xl font-black text-neutral-300"
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.2 }}
-          >
-            A Passionate
-          </motion.p>
-                               <FlipWords
-              words={words}
-              className="font-bold text-white text-4xl"
-            />
-          <motion.div
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.5 }}
-          >
-          </motion.div>
-          <motion.p
-            className="text-1xl font-black text-neutral300"
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.8 }}
-          >
-            create interactive UI.
-          </motion.p>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
 

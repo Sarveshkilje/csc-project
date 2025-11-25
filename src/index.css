@@ -69,11 +69,6 @@ body {
   @apply hover:-translate-y-1 duration-200;
 }
 
-.hover-animation-cards{
-  @apply cursor-pointer hover:-translate-y-2 hover:scale-[1.05] hover:shadow-lg 
-         duration-100 ease-out hover:bg-zinc-800 transition-all;
-}
-
 .section-spacing {
   @apply min-h-screen mt-10 md:mt-15;
 }
@@ -102,3 +97,20 @@ body {
 /* .nav-link {
   @apply text-lg md:text-base hover:text-white transition-colors;
 } */
+
+/* Navbar */
+/* Bottom Glow Border */
+.navbar-glow {
+  position: fixed;
+}
+
+.navbar-glow::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #00eaff, #007bff, #00eaff);
+  box-shadow: 0 1px 10px 1px #00cfff;
+}
